@@ -5,44 +5,46 @@
 }
 
 /*CSS VARIABLES*/
-:root{
-    --bg-color:#0f172a;
-    --second-bg-color:#111827;
-    --cord-color:#1e293b;
-    --text-color:#f8fafc;
-    --muted-color:#38dbf8;
-    --main-color:#38bdf8;
-    --main-dark:#0284c7;
+:root {
+    --bg-color: #0f172a;
+    --second-bg-color: #111827;
+    --cord-color: #1e293b;
+    --text-color: #f8fafc;
+    --muted-color: #38dbf8;
+    --main-color: #38bdf8;
+    --main-dark: #0284c7;
 }
 
-html{
+html {
     scroll-behavior: smooth;
 }
 
-body{
+body {
     background-color: var(--bg-color);
     color: var(--text-color);
     font-family: Arial, Helvetica, sans-serif;
 }
 
-section{
+section {
     padding: 100px 10%;
 }
 
-h1,h2,h3{
+h1,
+h2,
+h3 {
     line-height: 1.2;
 }
 
-a{
-    text-decoration:none;
+a {
+    text-decoration: none;
 }
 
-img{
+img {
     max-width: 100%;
     display: block;
 }
 
-header{
+header {
     position: fixed;
     top: 0;
     left: 0;
@@ -50,7 +52,7 @@ header{
     z-index: 1000;
 }
 
-nav{
+nav {
     width: 100%;
     padding: 20px 10%;
     display: flex;
@@ -59,29 +61,29 @@ nav{
     background-color: rgba(15, 23, 42, 0.95);
 }
 
-.logo{
+.logo {
     font-size: 24px;
     font-weight: bold;
     color: var(--main-color);
 }
 
-.nav-links{
+.nav-links {
     display: flex;
     list-style: none;
     gap: 30px;
 }
 
-.nav-links a{
+.nav-links a {
     color: var(--text-color);
     font-weight: 600;
     transition: color 0.3s ease;
 }
 
-.nav-links a:hover{
+.nav-links a:hover {
     color: var(--main-color);
 }
 
-#home{
+#home {
     min-height: 100vh;
     display: flex;
     justify-content: center;
@@ -93,24 +95,24 @@ nav{
     max-width: 800px;
 }
 
-.hero-content p:first-child{
+.hero-content p:first-child {
     color: var(--main-color);
     font-size: 28px;
     font-weight: 800;
 }
 
-.hero-content h1{
+.hero-content h1 {
     font-size: 60px;
     margin: 10px 0px;
 }
 
-.hero-content h2{
-    font-size : 28px;
+.hero-content h2 {
+    font-size: 28px;
     color: var(--muted-color);
     margin-bottom: 20px;
 }
 
-.hero-content p{
+.hero-content p {
     color: var(--muted-color);
     margin-bottom: 25px;
 }
@@ -125,10 +127,246 @@ nav{
     font-weight: 600;
     cursor: pointer;
     transition: background-color 0.3s ease;
-    transform: 0.3s ease ;
+    transform: 0.3s ease;
 }
 
-.btn:hover{
+.btn:hover {
     background-color: var(--main-dark);
     transform: 0.3s eese;
+}
+
+/*About Section*/
+
+.about-container {
+    display: flex;
+    align-items: center;
+    gap: 60px;
+
+}
+
+.about-image {
+    flex: 1;
+}
+
+.about-image img {
+    width: 350px;
+    border-radius: 20px;
+}
+
+.about-content {
+    flex: 1;
+}
+
+.about-content h1 {
+    font-size: 40px;
+    margin-bottom: 15px;
+}
+
+.about-content h3 {
+    color: var(--main-color);
+    margin-bottom: 20px;
+}
+
+.about-content p {
+    color: var(--muted-color);
+    margin-bottom: 15px;
+}
+
+.about-details {
+    margin: 25px 0;
+}
+
+
+/*skill section*/
+
+#skills h3,
+#projects h2,
+#contact h2 {
+    text-align: center;
+    font-size: 40px;
+    margin-bottom: 50px;
+}
+
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 25px;
+}
+
+.skill-card {
+    background-color: var(--cord-color);
+    padding: 30px 20px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    vertical-align: middle;
+}
+
+.skill-card i {
+    font-size: 50px;
+    color: var(--main-color);
+    margin-bottom: 15px;
+}
+
+.skill-card h3 {
+    margin-bottom: 10px;
+}
+
+.skill-card p {
+    color: var(--muted-color);
+}
+
+.skill-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 15px 30px rgba(0, 0, 0, 0.25);
+}
+
+/*project section*/
+
+.project-container {
+    display: grid;
+    grid-template-columns: repeat(3, fr);
+    gap: 30px;
+}
+
+.project-card {
+    background-color: var(--cord-color);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-8px);
+}
+
+.project-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+}
+
+.project-card h3,
+.project-card p,
+.project-links {
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+.project-card h3 {
+    margin-top: 20px;
+}
+
+.project-card p {
+    color: var(--main-color);
+    margin-top: 10px;
+}
+
+.project-links {
+    display: flex;
+    gap: 20px;
+    margin-top: 20px;
+    margin-bottom: 25px;
+}
+
+.project-links a {
+    color: var(--main-color);
+    font-weight: 600;
+}
+
+/*contact*/
+.contact-container {
+    display: grid;
+    grid-template-columns: repeat(1fr 1fr);
+    gap: 50px;
+}
+
+.contact-info h3 {
+    font-size: 30px;
+    margin-bottom: 20px;
+}
+
+.contact-info p {
+    color: var(--muted-color);
+    margin-bottom: 15px;
+}
+
+.name-container {
+    display: flex;
+    gap: 15px;
+    vertical-align: middle;
+
+}
+
+.name-container i {
+    font-size: 30px;
+    vertical-align: center;
+    color: rgb(255, 255, 255);
+    transform: translateY(-5px);
+}
+
+.location-container {
+    display: flex;
+    gap: 15px;
+    vertical-align: middle;
+}
+
+.location-container i {
+    font-size: 30px;
+    vertical-align: center;
+    color: rgb(255, 255, 255);
+    transform: translateY(-5px);
+}
+
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+input,
+textarea {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--cord-color);
+    color: var(--text-color);
+    border: 1px solid transparent;
+    border-radius: 8px;
+    outline: none;
+    font-size: 16px;
+}
+
+input:focus,
+textarea:focus {
+    border-color: var(--main-color);
+}
+
+/*footer*/
+footer {
+    text-align: center;
+    padding: 30px;
+    background-color: var(--second-bg-color);
+}
+
+.social-links {
+    margin-bottom: 15px;
+
+}
+
+.social-links a {
+    color: var(--text-color);
+    font-size: 25px;
+    margin: 0 10px;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+.social-links a:hover {
+    color: var(--main-color);
+    transform: translateY(-4px);
+}
+
+footer p {
+    color: var(--muted-color);
 }
